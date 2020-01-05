@@ -8,11 +8,7 @@
 
 import UIKit
 class MainTabBarController: UITabBarController {
-    
-    private var minimizedTopAnchorConstraint: NSLayoutConstraint!
-    private var maximizedTopAnchorConstraint: NSLayoutConstraint!
-    private var bottomAnchorConstraint: NSLayoutConstraint!
-    
+
     let searchVC: SearchViewController = SearchConfigurator.createModule() as! SearchViewController
     let favouriteVC: FavouritesViewController = FavouritesConfigurator.createModule() as! FavouritesViewController
     
@@ -23,15 +19,19 @@ class MainTabBarController: UITabBarController {
         tabBar.tintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         
         viewControllers = [
-            generateViewControllers(rootVC: searchVC, image: UIImage(systemName: "magnifyingglass") ?? UIImage(), title: "Search"),
-            generateViewControllers(rootVC: favouriteVC, image: UIImage(systemName: "magnifyingglass") ?? UIImage(), title: "Favourite")
+            generateViewControllers(rootVC: SearchConfigurator.createModule(), tabBarItem: .search, tag: 0, title: "Search"),
+            generateViewControllers(rootVC: FavouritesConfigurator.createModule(), tabBarItem: .favorites, tag: 1, title: "Favourite")
         ]
         
     }
     
-    private func generateViewControllers(rootVC: UIViewController, image: UIImage, title: String) -> UIViewController {
+//    private func createSarchNC() -> UINavigationController {
+//        let sear
+//    }
+    
+    private func generateViewControllers(rootVC: UIViewController, tabBarItem: UITabBarItem.SystemItem, tag: Int, title: String) -> UIViewController {
         let navVC = UINavigationController(rootViewController: rootVC)
-        navVC.tabBarItem.image = image
+        navVC.tabBarItem = UITabBarItem(tabBarSystemItem: tabBarItem, tag: tag)
         navVC.tabBarItem.title = title
         rootVC.navigationItem.title = title
         navVC.navigationBar.prefersLargeTitles = true

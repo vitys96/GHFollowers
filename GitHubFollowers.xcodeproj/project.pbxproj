@@ -7,6 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF14D33723C242900015E1C5 /* empty.json in Resources */ = {isa = PBXBuildFile; fileRef = EF14D32423C242900015E1C5 /* empty.json */; };
+		EF14D33823C242900015E1C5 /* NoConnection.json in Resources */ = {isa = PBXBuildFile; fileRef = EF14D32523C242900015E1C5 /* NoConnection.json */; };
+		EF14D33923C242900015E1C5 /* isPlaying2.json in Resources */ = {isa = PBXBuildFile; fileRef = EF14D32623C242900015E1C5 /* isPlaying2.json */; };
+		EF14D33A23C242900015E1C5 /* isPlaying.json in Resources */ = {isa = PBXBuildFile; fileRef = EF14D32723C242900015E1C5 /* isPlaying.json */; };
+		EF14D33B23C242900015E1C5 /* NoSearch.json in Resources */ = {isa = PBXBuildFile; fileRef = EF14D32823C242900015E1C5 /* NoSearch.json */; };
+		EF14D33C23C242900015E1C5 /* Extension + UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF14D32A23C242900015E1C5 /* Extension + UIButton.swift */; };
+		EF14D33D23C242900015E1C5 /* Extension + GCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF14D32B23C242900015E1C5 /* Extension + GCD.swift */; };
+		EF14D33E23C242900015E1C5 /* Extension + CMTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF14D32C23C242900015E1C5 /* Extension + CMTime.swift */; };
+		EF14D33F23C242900015E1C5 /* Extension + CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF14D32D23C242900015E1C5 /* Extension + CGFloat.swift */; };
+		EF14D34023C242900015E1C5 /* Extension + Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF14D32E23C242900015E1C5 /* Extension + Nib.swift */; };
+		EF14D34123C242900015E1C5 /* Extension + ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF14D32F23C242900015E1C5 /* Extension + ViewController.swift */; };
+		EF14D34223C242900015E1C5 /* Extension + TableDirector.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF14D33023C242900015E1C5 /* Extension + TableDirector.swift */; };
+		EF14D34323C242900015E1C5 /* UITableView + TableFlip.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF14D33123C242900015E1C5 /* UITableView + TableFlip.swift */; };
+		EF14D34423C242900015E1C5 /* UIViewController + Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF14D33223C242900015E1C5 /* UIViewController + Storyboard.swift */; };
+		EF14D34523C242900015E1C5 /* Extension + UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF14D33323C242900015E1C5 /* Extension + UIView.swift */; };
+		EF14D34623C242900015E1C5 /* UIView + Anchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF14D33423C242900015E1C5 /* UIView + Anchors.swift */; };
+		EF14D34823C244540015E1C5 /* PrettyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF14D34723C244540015E1C5 /* PrettyButton.swift */; };
+		EF14D34A23C2446E0015E1C5 /* PrettyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF14D34923C2446E0015E1C5 /* PrettyTextField.swift */; };
 		EF9CB29123C22214006FAA26 /* Favourites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF9CB28A23C22214006FAA26 /* Favourites.storyboard */; };
 		EF9CB29223C22214006FAA26 /* FavouritesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9CB28B23C22214006FAA26 /* FavouritesPresenter.swift */; };
 		EF9CB29323C22214006FAA26 /* FavouritesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9CB28C23C22214006FAA26 /* FavouritesRouter.swift */; };
@@ -33,6 +51,24 @@
 		37E7B93A336A8B7CFC73729E /* Pods-GitHubFollowers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubFollowers.debug.xcconfig"; path = "Target Support Files/Pods-GitHubFollowers/Pods-GitHubFollowers.debug.xcconfig"; sourceTree = "<group>"; };
 		3AE77884C9FBDD3E76A73447 /* Pods_GitHubFollowers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitHubFollowers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB6A4C8D9C0C93DC28FF17B4 /* Pods-GitHubFollowers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubFollowers.release.xcconfig"; path = "Target Support Files/Pods-GitHubFollowers/Pods-GitHubFollowers.release.xcconfig"; sourceTree = "<group>"; };
+		EF14D32423C242900015E1C5 /* empty.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = empty.json; sourceTree = "<group>"; };
+		EF14D32523C242900015E1C5 /* NoConnection.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = NoConnection.json; sourceTree = "<group>"; };
+		EF14D32623C242900015E1C5 /* isPlaying2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = isPlaying2.json; sourceTree = "<group>"; };
+		EF14D32723C242900015E1C5 /* isPlaying.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = isPlaying.json; sourceTree = "<group>"; };
+		EF14D32823C242900015E1C5 /* NoSearch.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = NoSearch.json; sourceTree = "<group>"; };
+		EF14D32A23C242900015E1C5 /* Extension + UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension + UIButton.swift"; sourceTree = "<group>"; };
+		EF14D32B23C242900015E1C5 /* Extension + GCD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension + GCD.swift"; sourceTree = "<group>"; };
+		EF14D32C23C242900015E1C5 /* Extension + CMTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension + CMTime.swift"; sourceTree = "<group>"; };
+		EF14D32D23C242900015E1C5 /* Extension + CGFloat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension + CGFloat.swift"; sourceTree = "<group>"; };
+		EF14D32E23C242900015E1C5 /* Extension + Nib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension + Nib.swift"; sourceTree = "<group>"; };
+		EF14D32F23C242900015E1C5 /* Extension + ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension + ViewController.swift"; sourceTree = "<group>"; };
+		EF14D33023C242900015E1C5 /* Extension + TableDirector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension + TableDirector.swift"; sourceTree = "<group>"; };
+		EF14D33123C242900015E1C5 /* UITableView + TableFlip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView + TableFlip.swift"; sourceTree = "<group>"; };
+		EF14D33223C242900015E1C5 /* UIViewController + Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController + Storyboard.swift"; sourceTree = "<group>"; };
+		EF14D33323C242900015E1C5 /* Extension + UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension + UIView.swift"; sourceTree = "<group>"; };
+		EF14D33423C242900015E1C5 /* UIView + Anchors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView + Anchors.swift"; sourceTree = "<group>"; };
+		EF14D34723C244540015E1C5 /* PrettyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrettyButton.swift; sourceTree = "<group>"; };
+		EF14D34923C2446E0015E1C5 /* PrettyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrettyTextField.swift; sourceTree = "<group>"; };
 		EF9CB28A23C22214006FAA26 /* Favourites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favourites.storyboard; sourceTree = "<group>"; };
 		EF9CB28B23C22214006FAA26 /* FavouritesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesPresenter.swift; sourceTree = "<group>"; };
 		EF9CB28C23C22214006FAA26 /* FavouritesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesRouter.swift; sourceTree = "<group>"; };
@@ -85,6 +121,54 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		EF14D31F23C242900015E1C5 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				EF14D32023C242900015E1C5 /* Custom Clases */,
+				EF14D32323C242900015E1C5 /* LottieFiles */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		EF14D32023C242900015E1C5 /* Custom Clases */ = {
+			isa = PBXGroup;
+			children = (
+				EF14D34723C244540015E1C5 /* PrettyButton.swift */,
+				EF14D34923C2446E0015E1C5 /* PrettyTextField.swift */,
+			);
+			path = "Custom Clases";
+			sourceTree = "<group>";
+		};
+		EF14D32323C242900015E1C5 /* LottieFiles */ = {
+			isa = PBXGroup;
+			children = (
+				EF14D32423C242900015E1C5 /* empty.json */,
+				EF14D32523C242900015E1C5 /* NoConnection.json */,
+				EF14D32623C242900015E1C5 /* isPlaying2.json */,
+				EF14D32723C242900015E1C5 /* isPlaying.json */,
+				EF14D32823C242900015E1C5 /* NoSearch.json */,
+			);
+			path = LottieFiles;
+			sourceTree = "<group>";
+		};
+		EF14D32923C242900015E1C5 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				EF14D32A23C242900015E1C5 /* Extension + UIButton.swift */,
+				EF14D32B23C242900015E1C5 /* Extension + GCD.swift */,
+				EF14D32C23C242900015E1C5 /* Extension + CMTime.swift */,
+				EF14D32D23C242900015E1C5 /* Extension + CGFloat.swift */,
+				EF14D32E23C242900015E1C5 /* Extension + Nib.swift */,
+				EF14D32F23C242900015E1C5 /* Extension + ViewController.swift */,
+				EF14D33023C242900015E1C5 /* Extension + TableDirector.swift */,
+				EF14D33123C242900015E1C5 /* UITableView + TableFlip.swift */,
+				EF14D33223C242900015E1C5 /* UIViewController + Storyboard.swift */,
+				EF14D33323C242900015E1C5 /* Extension + UIView.swift */,
+				EF14D33423C242900015E1C5 /* UIView + Anchors.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		EF9CB29823C2221A006FAA26 /* Favourite */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +216,8 @@
 				EFADB8DE23C21A77007565C9 /* Application */,
 				EFADB8DF23C22092007565C9 /* MainTabBarController.swift */,
 				EF9CB29923C22225006FAA26 /* Modules */,
+				EF14D32923C242900015E1C5 /* Extension */,
+				EF14D31F23C242900015E1C5 /* Helpers */,
 				EFADB8D323C21A0A007565C9 /* Assets.xcassets */,
 				EFADB8D523C21A0A007565C9 /* LaunchScreen.storyboard */,
 				EFADB8D823C21A0A007565C9 /* Info.plist */,
@@ -223,8 +309,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF9CB29123C22214006FAA26 /* Favourites.storyboard in Resources */,
+				EF14D33723C242900015E1C5 /* empty.json in Resources */,
+				EF14D33B23C242900015E1C5 /* NoSearch.json in Resources */,
+				EF14D33923C242900015E1C5 /* isPlaying2.json in Resources */,
+				EF14D33823C242900015E1C5 /* NoConnection.json in Resources */,
 				EFADB8D723C21A0A007565C9 /* LaunchScreen.storyboard in Resources */,
 				EFADB8E823C22122007565C9 /* Search.storyboard in Resources */,
+				EF14D33A23C242900015E1C5 /* isPlaying.json in Resources */,
 				EFADB8D423C21A0A007565C9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,19 +370,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF9CB29423C22214006FAA26 /* FavouritesViewController.swift in Sources */,
+				EF14D33C23C242900015E1C5 /* Extension + UIButton.swift in Sources */,
 				EF9CB29523C22214006FAA26 /* FavouritesProtocols.swift in Sources */,
+				EF14D34023C242900015E1C5 /* Extension + Nib.swift in Sources */,
 				EFADB8EE23C22122007565C9 /* SearchConfigurator.swift in Sources */,
 				EF9CB29323C22214006FAA26 /* FavouritesRouter.swift in Sources */,
 				EFADB8EB23C22122007565C9 /* SearchViewController.swift in Sources */,
+				EF14D34623C242900015E1C5 /* UIView + Anchors.swift in Sources */,
 				EFADB8CB23C21A07007565C9 /* AppDelegate.swift in Sources */,
+				EF14D34A23C2446E0015E1C5 /* PrettyTextField.swift in Sources */,
+				EF14D34323C242900015E1C5 /* UITableView + TableFlip.swift in Sources */,
 				EF9CB29623C22214006FAA26 /* FavouritesInteractor.swift in Sources */,
 				EFADB8ED23C22122007565C9 /* SearchInteractor.swift in Sources */,
+				EF14D33E23C242900015E1C5 /* Extension + CMTime.swift in Sources */,
 				EFADB8EC23C22122007565C9 /* SearchProtocols.swift in Sources */,
+				EF14D34523C242900015E1C5 /* Extension + UIView.swift in Sources */,
+				EF14D33F23C242900015E1C5 /* Extension + CGFloat.swift in Sources */,
+				EF14D34823C244540015E1C5 /* PrettyButton.swift in Sources */,
 				EFADB8EA23C22122007565C9 /* SearchRouter.swift in Sources */,
+				EF14D33D23C242900015E1C5 /* Extension + GCD.swift in Sources */,
 				EFADB8E023C22092007565C9 /* MainTabBarController.swift in Sources */,
 				EF9CB29723C22214006FAA26 /* FavouritesConfigurator.swift in Sources */,
 				EFADB8E923C22122007565C9 /* SearchPresenter.swift in Sources */,
+				EF14D34123C242900015E1C5 /* Extension + ViewController.swift in Sources */,
+				EF14D34423C242900015E1C5 /* UIViewController + Storyboard.swift in Sources */,
 				EF9CB29223C22214006FAA26 /* FavouritesPresenter.swift in Sources */,
+				EF14D34223C242900015E1C5 /* Extension + TableDirector.swift in Sources */,
 				EFADB8CD23C21A07007565C9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -13,17 +13,42 @@ import UIKit
 
 class SearchViewController: UIViewController {
     // MARK: - Properties
-	var presenter: SearchPresenterInterface?
-
+    var presenter: SearchPresenterInterface?
+    private let logoImageView = UIImageView()
+    private let usernameTextField = PrettyTextField()
+    private let actionButton = PrettyButton(backgroundColor: .systemGreen, title: "Get Followers")
+    
     // MARK: - Lifecycle -
-	override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .green
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.isNavigationBarHidden = true
     }
-
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        configureUI()
+    }
+    
 }
 
 // MARK: - SearchView
 extension SearchViewController: SearchView {
     
+}
+
+// MARK: - UI Config
+extension SearchViewController {
+    private func configureUI() {
+        self.view.backgroundColor = .systemBackground
+        self.view.addSubview(logoImageView)
+        self.view.addSubview(usernameTextField)
+        self.view.addSubview(actionButton)
+        logoImageView.image = UIImage(named: "gh-logo")!
+        logoImageView.anchor(view.safeAreaLayoutGuide.topAnchor, topConstant: 80, widthConstant: 200, heightConstant: 200)
+        logoImageView.anchorCenterXToSuperview()
+        usernameTextField.anchor(logoImageView.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, topConstant: 48, leftConstant: 50, rightConstant: 50, heightConstant: 50)
+        actionButton.anchor(left: view.leftAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.rightAnchor, leftConstant: 50, bottomConstant: 50, rightConstant: 50, heightConstant: 50)
+        
+    }
 }
