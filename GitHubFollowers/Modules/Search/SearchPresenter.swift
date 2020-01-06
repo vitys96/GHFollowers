@@ -28,7 +28,9 @@ class SearchPresenter {
 
 // MARK: - SearchPresenterInterface -
 extension SearchPresenter: SearchPresenterInterface {
-    
+    func navigateToFollowList(title: String) {
+        self.router.navigate(to: .secondModule(title: title))
+    }
 }
 
 // MARK: - SearchInteractorOutput -

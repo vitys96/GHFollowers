@@ -13,7 +13,7 @@ import UIKit
 
 struct FavouritesConfigurator {
 
-	static func createModule() -> UIViewController {
+    static func createModule() -> UIViewController {
         var view: FavouritesViewController!
 
         let viewController = UIStoryboard.init(name: "Favourites", bundle: Bundle.main).instantiateInitialViewController()

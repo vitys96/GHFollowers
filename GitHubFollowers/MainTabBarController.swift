@@ -16,7 +16,7 @@ class MainTabBarController: UITabBarController {
         super.viewDidLoad()
         
         view.backgroundColor = .white
-        tabBar.tintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        tabBar.tintColor = .systemGreen
         
         viewControllers = [
             generateViewControllers(rootVC: SearchConfigurator.createModule(), tabBarItem: .search, tag: 0, title: "Search"),
@@ -25,16 +25,12 @@ class MainTabBarController: UITabBarController {
         
     }
     
-//    private func createSarchNC() -> UINavigationController {
-//        let sear
-//    }
-    
     private func generateViewControllers(rootVC: UIViewController, tabBarItem: UITabBarItem.SystemItem, tag: Int, title: String) -> UIViewController {
         let navVC = UINavigationController(rootViewController: rootVC)
         navVC.tabBarItem = UITabBarItem(tabBarSystemItem: tabBarItem, tag: tag)
         navVC.tabBarItem.title = title
         rootVC.navigationItem.title = title
-        navVC.navigationBar.prefersLargeTitles = true
+        navVC.navigationBar.prefersLargeTitles = false
         return navVC
     }
     

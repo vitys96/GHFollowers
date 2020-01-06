@@ -25,6 +25,13 @@
 		EF14D34623C242900015E1C5 /* UIView + Anchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF14D33423C242900015E1C5 /* UIView + Anchors.swift */; };
 		EF14D34823C244540015E1C5 /* PrettyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF14D34723C244540015E1C5 /* PrettyButton.swift */; };
 		EF14D34A23C2446E0015E1C5 /* PrettyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF14D34923C2446E0015E1C5 /* PrettyTextField.swift */; };
+		EF53025923C366DB00334ACD /* FollowerList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF53025223C366DB00334ACD /* FollowerList.storyboard */; };
+		EF53025A23C366DB00334ACD /* FollowerListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF53025323C366DB00334ACD /* FollowerListPresenter.swift */; };
+		EF53025B23C366DB00334ACD /* FollowerListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF53025423C366DB00334ACD /* FollowerListRouter.swift */; };
+		EF53025C23C366DB00334ACD /* FollowerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF53025523C366DB00334ACD /* FollowerListViewController.swift */; };
+		EF53025D23C366DB00334ACD /* FollowerListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF53025623C366DB00334ACD /* FollowerListProtocols.swift */; };
+		EF53025E23C366DB00334ACD /* FollowerListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF53025723C366DB00334ACD /* FollowerListInteractor.swift */; };
+		EF53025F23C366DB00334ACD /* FollowerListConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF53025823C366DB00334ACD /* FollowerListConfigurator.swift */; };
 		EF9CB29123C22214006FAA26 /* Favourites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF9CB28A23C22214006FAA26 /* Favourites.storyboard */; };
 		EF9CB29223C22214006FAA26 /* FavouritesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9CB28B23C22214006FAA26 /* FavouritesPresenter.swift */; };
 		EF9CB29323C22214006FAA26 /* FavouritesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9CB28C23C22214006FAA26 /* FavouritesRouter.swift */; };
@@ -69,6 +76,13 @@
 		EF14D33423C242900015E1C5 /* UIView + Anchors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView + Anchors.swift"; sourceTree = "<group>"; };
 		EF14D34723C244540015E1C5 /* PrettyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrettyButton.swift; sourceTree = "<group>"; };
 		EF14D34923C2446E0015E1C5 /* PrettyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrettyTextField.swift; sourceTree = "<group>"; };
+		EF53025223C366DB00334ACD /* FollowerList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FollowerList.storyboard; sourceTree = "<group>"; };
+		EF53025323C366DB00334ACD /* FollowerListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListPresenter.swift; sourceTree = "<group>"; };
+		EF53025423C366DB00334ACD /* FollowerListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListRouter.swift; sourceTree = "<group>"; };
+		EF53025523C366DB00334ACD /* FollowerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListViewController.swift; sourceTree = "<group>"; };
+		EF53025623C366DB00334ACD /* FollowerListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListProtocols.swift; sourceTree = "<group>"; };
+		EF53025723C366DB00334ACD /* FollowerListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListInteractor.swift; sourceTree = "<group>"; };
+		EF53025823C366DB00334ACD /* FollowerListConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListConfigurator.swift; sourceTree = "<group>"; };
 		EF9CB28A23C22214006FAA26 /* Favourites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favourites.storyboard; sourceTree = "<group>"; };
 		EF9CB28B23C22214006FAA26 /* FavouritesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesPresenter.swift; sourceTree = "<group>"; };
 		EF9CB28C23C22214006FAA26 /* FavouritesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesRouter.swift; sourceTree = "<group>"; };
@@ -169,16 +183,30 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		EF53026023C3671F00334ACD /* FollowerList */ = {
+			isa = PBXGroup;
+			children = (
+				EF53025823C366DB00334ACD /* FollowerListConfigurator.swift */,
+				EF53025223C366DB00334ACD /* FollowerList.storyboard */,
+				EF53025523C366DB00334ACD /* FollowerListViewController.swift */,
+				EF53025323C366DB00334ACD /* FollowerListPresenter.swift */,
+				EF53025723C366DB00334ACD /* FollowerListInteractor.swift */,
+				EF53025423C366DB00334ACD /* FollowerListRouter.swift */,
+				EF53025623C366DB00334ACD /* FollowerListProtocols.swift */,
+			);
+			path = FollowerList;
+			sourceTree = "<group>";
+		};
 		EF9CB29823C2221A006FAA26 /* Favourite */ = {
 			isa = PBXGroup;
 			children = (
-				EF9CB28A23C22214006FAA26 /* Favourites.storyboard */,
-				EF9CB28B23C22214006FAA26 /* FavouritesPresenter.swift */,
-				EF9CB28C23C22214006FAA26 /* FavouritesRouter.swift */,
-				EF9CB28D23C22214006FAA26 /* FavouritesViewController.swift */,
-				EF9CB28E23C22214006FAA26 /* FavouritesProtocols.swift */,
-				EF9CB28F23C22214006FAA26 /* FavouritesInteractor.swift */,
 				EF9CB29023C22214006FAA26 /* FavouritesConfigurator.swift */,
+				EF9CB28A23C22214006FAA26 /* Favourites.storyboard */,
+				EF9CB28D23C22214006FAA26 /* FavouritesViewController.swift */,
+				EF9CB28B23C22214006FAA26 /* FavouritesPresenter.swift */,
+				EF9CB28F23C22214006FAA26 /* FavouritesInteractor.swift */,
+				EF9CB28C23C22214006FAA26 /* FavouritesRouter.swift */,
+				EF9CB28E23C22214006FAA26 /* FavouritesProtocols.swift */,
 			);
 			path = Favourite;
 			sourceTree = "<group>";
@@ -187,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				EFADB8EF23C22127007565C9 /* Search */,
+				EF53026023C3671F00334ACD /* FollowerList */,
 				EF9CB29823C2221A006FAA26 /* Favourite */,
 			);
 			path = Modules;
@@ -237,13 +266,13 @@
 		EFADB8EF23C22127007565C9 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				EFADB8E123C22122007565C9 /* Search.storyboard */,
-				EFADB8E223C22122007565C9 /* SearchPresenter.swift */,
-				EFADB8E323C22122007565C9 /* SearchRouter.swift */,
-				EFADB8E423C22122007565C9 /* SearchViewController.swift */,
-				EFADB8E523C22122007565C9 /* SearchProtocols.swift */,
-				EFADB8E623C22122007565C9 /* SearchInteractor.swift */,
 				EFADB8E723C22122007565C9 /* SearchConfigurator.swift */,
+				EFADB8E123C22122007565C9 /* Search.storyboard */,
+				EFADB8E423C22122007565C9 /* SearchViewController.swift */,
+				EFADB8E223C22122007565C9 /* SearchPresenter.swift */,
+				EFADB8E623C22122007565C9 /* SearchInteractor.swift */,
+				EFADB8E323C22122007565C9 /* SearchRouter.swift */,
+				EFADB8E523C22122007565C9 /* SearchProtocols.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -316,6 +345,7 @@
 				EFADB8D723C21A0A007565C9 /* LaunchScreen.storyboard in Resources */,
 				EFADB8E823C22122007565C9 /* Search.storyboard in Resources */,
 				EF14D33A23C242900015E1C5 /* isPlaying.json in Resources */,
+				EF53025923C366DB00334ACD /* FollowerList.storyboard in Resources */,
 				EFADB8D423C21A0A007565C9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -369,8 +399,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF53025C23C366DB00334ACD /* FollowerListViewController.swift in Sources */,
+				EF53025D23C366DB00334ACD /* FollowerListProtocols.swift in Sources */,
 				EF9CB29423C22214006FAA26 /* FavouritesViewController.swift in Sources */,
 				EF14D33C23C242900015E1C5 /* Extension + UIButton.swift in Sources */,
+				EF53025A23C366DB00334ACD /* FollowerListPresenter.swift in Sources */,
 				EF9CB29523C22214006FAA26 /* FavouritesProtocols.swift in Sources */,
 				EF14D34023C242900015E1C5 /* Extension + Nib.swift in Sources */,
 				EFADB8EE23C22122007565C9 /* SearchConfigurator.swift in Sources */,
@@ -382,12 +415,15 @@
 				EF14D34323C242900015E1C5 /* UITableView + TableFlip.swift in Sources */,
 				EF9CB29623C22214006FAA26 /* FavouritesInteractor.swift in Sources */,
 				EFADB8ED23C22122007565C9 /* SearchInteractor.swift in Sources */,
+				EF53025F23C366DB00334ACD /* FollowerListConfigurator.swift in Sources */,
 				EF14D33E23C242900015E1C5 /* Extension + CMTime.swift in Sources */,
+				EF53025E23C366DB00334ACD /* FollowerListInteractor.swift in Sources */,
 				EFADB8EC23C22122007565C9 /* SearchProtocols.swift in Sources */,
 				EF14D34523C242900015E1C5 /* Extension + UIView.swift in Sources */,
 				EF14D33F23C242900015E1C5 /* Extension + CGFloat.swift in Sources */,
 				EF14D34823C244540015E1C5 /* PrettyButton.swift in Sources */,
 				EFADB8EA23C22122007565C9 /* SearchRouter.swift in Sources */,
+				EF53025B23C366DB00334ACD /* FollowerListRouter.swift in Sources */,
 				EF14D33D23C242900015E1C5 /* Extension + GCD.swift in Sources */,
 				EFADB8E023C22092007565C9 /* MainTabBarController.swift in Sources */,
 				EF9CB29723C22214006FAA26 /* FavouritesConfigurator.swift in Sources */,

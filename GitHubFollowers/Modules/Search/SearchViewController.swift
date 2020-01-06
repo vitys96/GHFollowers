@@ -42,13 +42,50 @@ extension SearchViewController {
     private func configureUI() {
         self.view.backgroundColor = .systemBackground
         self.view.addSubview(logoImageView)
-        self.view.addSubview(usernameTextField)
-        self.view.addSubview(actionButton)
+
         logoImageView.image = UIImage(named: "gh-logo")!
         logoImageView.anchor(view.safeAreaLayoutGuide.topAnchor, topConstant: 80, widthConstant: 200, heightConstant: 200)
         logoImageView.anchorCenterXToSuperview()
+        configureTextField()
+        configureActionButton()
+    }
+    
+    private func configureTextField() {
+        usernameTextField.delegate = self
+        self.view.addSubview(usernameTextField)
         usernameTextField.anchor(logoImageView.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, topConstant: 48, leftConstant: 50, rightConstant: 50, heightConstant: 50)
+    }
+    
+    private func configureActionButton() {
+        self.view.addSubview(actionButton)
         actionButton.anchor(left: view.leftAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.rightAnchor, leftConstant: 50, bottomConstant: 50, rightConstant: 50, heightConstant: 50)
-        
+        actionButton.addTarget(self, action: #selector(pushFetchFollowersList), for: .touchUpInside)
+    }
+}
+
+// MARK: - Objc Methods
+extension SearchViewController {
+    @objc private func pushFetchFollowersList() {
+        guard let text = usernameTextField.text else { return }
+        if !text.isEmpty {
+            self.presenter?.navigateToFollowList(title: text)
+        } else {
+            usernameTextField.shake()
+        }
+    }
+}
+
+// MARK: - UITextFieldDelegate
+extension SearchViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        pushFetchFollowersList()
+        return true
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if (string == " ") {
+            return false
+        }
+        return true
     }
 }

@@ -20,11 +20,16 @@ class SearchRouter {
 extension SearchRouter: SearchWireframeInterface {
     
     func navigate(to option: SearchNavigationOption) {
-//        switch option {
-//        case .firstModule:
-//              openFirstModule()
-//        case .secondModule(let someData):
-        //      openSecondModule(with someData)
-//        }
+        let vc: UIViewController!
+        switch option {
+        case .secondModule(let title):
+            vc = FollowerListConfigurator.createModule(title: title)
+            vc.title = title
+        }
+        if vc is UINavigationController {
+            viewController?.present(vc, animated: true, completion: nil)
+        } else {
+            viewController?.navigationController?.pushViewController(vc, animated: true)
+        }
     }
 }
