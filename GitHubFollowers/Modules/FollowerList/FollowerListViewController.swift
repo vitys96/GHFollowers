@@ -18,7 +18,8 @@ class FollowerListViewController: UIViewController {
     // MARK: - Lifecycle -
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.isNavigationBarHidden = false
+        navigationController?.setNavigationBarHidden(false, animated: true)
+        self.presenter?.viewWillAppear()
     }
     
     override func viewDidLoad() {

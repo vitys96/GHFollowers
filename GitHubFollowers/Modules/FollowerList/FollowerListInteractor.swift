@@ -12,9 +12,21 @@
 import UIKit
 
 class FollowerListInteractor: FollowerListInteractorInput {
+    
+    
     // MARK: - Properties
     weak var presenter: FollowerListInteractorOutput?
     
     // MARK: - FollowerListInteractorInput -
-
+    func fetchData(userName: String) {
+        FollowersSearchManager.searchSongs(searchingText: userName)
+        .done {[weak self] (followersList) in
+                self?.presenter?.fetchedFollowersList(lists: followersList)
+        }.catch {[weak self] (error) in
+            self?.presenter?.fetchedFollowersList(error: error)
+        }
+        .finally {[weak self] in
+            self?.presenter?.fetchedFully()
+        }
+    }
 }

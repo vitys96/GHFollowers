@@ -45,13 +45,17 @@ extension FollowerListPresenterInterface {
 
 //MARK: Interactor -
 protocol FollowerListInteractorOutput: class {
-
+    func fetchedFollowersList(lists: [Follower])
+    func fetchedFollowersList(error: Error)
+    func fetchedFully()
+    
     /* Interactor -> Presenter */
 }
 
 protocol FollowerListInteractorInput: class {
 
     var presenter: FollowerListInteractorOutput?  { get set }
+    func fetchData(userName: String)
 
     /* Presenter -> Interactor */
 }

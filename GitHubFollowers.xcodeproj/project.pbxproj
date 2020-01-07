@@ -25,6 +25,12 @@
 		EF14D34623C242900015E1C5 /* UIView + Anchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF14D33423C242900015E1C5 /* UIView + Anchors.swift */; };
 		EF14D34823C244540015E1C5 /* PrettyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF14D34723C244540015E1C5 /* PrettyButton.swift */; };
 		EF14D34A23C2446E0015E1C5 /* PrettyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF14D34923C2446E0015E1C5 /* PrettyTextField.swift */; };
+		EF28C89323C4679B000EC9DA /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF28C89223C4679B000EC9DA /* RequestManager.swift */; };
+		EF318DCC23C3CCBA007F3C71 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF318DCB23C3CCBA007F3C71 /* User.swift */; };
+		EF318DCE23C3CE6C007F3C71 /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF318DCD23C3CE6C007F3C71 /* Follower.swift */; };
+		EF318DD123C3D025007F3C71 /* MainAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF318DD023C3D025007F3C71 /* MainAPI.swift */; };
+		EF318DD323C3D038007F3C71 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF318DD223C3D038007F3C71 /* APIResponse.swift */; };
+		EF318DD523C3D0EB007F3C71 /* GetFollowersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF318DD423C3D0EB007F3C71 /* GetFollowersAPI.swift */; };
 		EF53025923C366DB00334ACD /* FollowerList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF53025223C366DB00334ACD /* FollowerList.storyboard */; };
 		EF53025A23C366DB00334ACD /* FollowerListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF53025323C366DB00334ACD /* FollowerListPresenter.swift */; };
 		EF53025B23C366DB00334ACD /* FollowerListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF53025423C366DB00334ACD /* FollowerListRouter.swift */; };
@@ -32,6 +38,7 @@
 		EF53025D23C366DB00334ACD /* FollowerListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF53025623C366DB00334ACD /* FollowerListProtocols.swift */; };
 		EF53025E23C366DB00334ACD /* FollowerListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF53025723C366DB00334ACD /* FollowerListInteractor.swift */; };
 		EF53025F23C366DB00334ACD /* FollowerListConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF53025823C366DB00334ACD /* FollowerListConfigurator.swift */; };
+		EF7D18C023C3D39D00058A15 /* FollowersSearchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7D18BF23C3D39D00058A15 /* FollowersSearchManager.swift */; };
 		EF9CB29123C22214006FAA26 /* Favourites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF9CB28A23C22214006FAA26 /* Favourites.storyboard */; };
 		EF9CB29223C22214006FAA26 /* FavouritesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9CB28B23C22214006FAA26 /* FavouritesPresenter.swift */; };
 		EF9CB29323C22214006FAA26 /* FavouritesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9CB28C23C22214006FAA26 /* FavouritesRouter.swift */; };
@@ -51,6 +58,8 @@
 		EFADB8EC23C22122007565C9 /* SearchProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFADB8E523C22122007565C9 /* SearchProtocols.swift */; };
 		EFADB8ED23C22122007565C9 /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFADB8E623C22122007565C9 /* SearchInteractor.swift */; };
 		EFADB8EE23C22122007565C9 /* SearchConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFADB8E723C22122007565C9 /* SearchConfigurator.swift */; };
+		EFDDCCD223C4DD8500EE8BB7 /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDDCCD123C4DD8500EE8BB7 /* CustomAlert.swift */; };
+		EFDDCCD423C4DD9500EE8BB7 /* CustomAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFDDCCD323C4DD9500EE8BB7 /* CustomAlert.xib */; };
 		F19460BA4BAAE6177677B73E /* Pods_GitHubFollowers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AE77884C9FBDD3E76A73447 /* Pods_GitHubFollowers.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +85,12 @@
 		EF14D33423C242900015E1C5 /* UIView + Anchors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView + Anchors.swift"; sourceTree = "<group>"; };
 		EF14D34723C244540015E1C5 /* PrettyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrettyButton.swift; sourceTree = "<group>"; };
 		EF14D34923C2446E0015E1C5 /* PrettyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrettyTextField.swift; sourceTree = "<group>"; };
+		EF28C89223C4679B000EC9DA /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
+		EF318DCB23C3CCBA007F3C71 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		EF318DCD23C3CE6C007F3C71 /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
+		EF318DD023C3D025007F3C71 /* MainAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAPI.swift; sourceTree = "<group>"; };
+		EF318DD223C3D038007F3C71 /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
+		EF318DD423C3D0EB007F3C71 /* GetFollowersAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFollowersAPI.swift; sourceTree = "<group>"; };
 		EF53025223C366DB00334ACD /* FollowerList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FollowerList.storyboard; sourceTree = "<group>"; };
 		EF53025323C366DB00334ACD /* FollowerListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListPresenter.swift; sourceTree = "<group>"; };
 		EF53025423C366DB00334ACD /* FollowerListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListRouter.swift; sourceTree = "<group>"; };
@@ -83,6 +98,7 @@
 		EF53025623C366DB00334ACD /* FollowerListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListProtocols.swift; sourceTree = "<group>"; };
 		EF53025723C366DB00334ACD /* FollowerListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListInteractor.swift; sourceTree = "<group>"; };
 		EF53025823C366DB00334ACD /* FollowerListConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListConfigurator.swift; sourceTree = "<group>"; };
+		EF7D18BF23C3D39D00058A15 /* FollowersSearchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersSearchManager.swift; sourceTree = "<group>"; };
 		EF9CB28A23C22214006FAA26 /* Favourites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favourites.storyboard; sourceTree = "<group>"; };
 		EF9CB28B23C22214006FAA26 /* FavouritesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesPresenter.swift; sourceTree = "<group>"; };
 		EF9CB28C23C22214006FAA26 /* FavouritesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesRouter.swift; sourceTree = "<group>"; };
@@ -104,6 +120,8 @@
 		EFADB8E523C22122007565C9 /* SearchProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchProtocols.swift; sourceTree = "<group>"; };
 		EFADB8E623C22122007565C9 /* SearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
 		EFADB8E723C22122007565C9 /* SearchConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchConfigurator.swift; sourceTree = "<group>"; };
+		EFDDCCD123C4DD8500EE8BB7 /* CustomAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
+		EFDDCCD323C4DD9500EE8BB7 /* CustomAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomAlert.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,19 +156,9 @@
 		EF14D31F23C242900015E1C5 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				EF14D32023C242900015E1C5 /* Custom Clases */,
 				EF14D32323C242900015E1C5 /* LottieFiles */,
 			);
 			path = Helpers;
-			sourceTree = "<group>";
-		};
-		EF14D32023C242900015E1C5 /* Custom Clases */ = {
-			isa = PBXGroup;
-			children = (
-				EF14D34723C244540015E1C5 /* PrettyButton.swift */,
-				EF14D34923C2446E0015E1C5 /* PrettyTextField.swift */,
-			);
-			path = "Custom Clases";
 			sourceTree = "<group>";
 		};
 		EF14D32323C242900015E1C5 /* LottieFiles */ = {
@@ -183,6 +191,54 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		EF28C89423C4B1EB000EC9DA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EFDDCCD023C4DD3800EE8BB7 /* Alerts */,
+				EF28C89523C4B1FF000EC9DA /* CustomViews */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EF28C89523C4B1FF000EC9DA /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				EF14D34723C244540015E1C5 /* PrettyButton.swift */,
+				EF14D34923C2446E0015E1C5 /* PrettyTextField.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		EF318DC923C3CC96007F3C71 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				EF28C89423C4B1EB000EC9DA /* Views */,
+				EF7D18BD23C3D36F00058A15 /* Managers */,
+				EF318DCF23C3D01B007F3C71 /* API */,
+				EF318DCA23C3CCAD007F3C71 /* Models */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		EF318DCA23C3CCAD007F3C71 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EF318DCB23C3CCBA007F3C71 /* User.swift */,
+				EF318DCD23C3CE6C007F3C71 /* Follower.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EF318DCF23C3D01B007F3C71 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				EF318DD023C3D025007F3C71 /* MainAPI.swift */,
+				EF318DD223C3D038007F3C71 /* APIResponse.swift */,
+				EF318DD423C3D0EB007F3C71 /* GetFollowersAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		EF53026023C3671F00334ACD /* FollowerList */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,6 +251,23 @@
 				EF53025623C366DB00334ACD /* FollowerListProtocols.swift */,
 			);
 			path = FollowerList;
+			sourceTree = "<group>";
+		};
+		EF7D18BD23C3D36F00058A15 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				EF7D18BE23C3D37E00058A15 /* Network */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		EF7D18BE23C3D37E00058A15 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				EF7D18BF23C3D39D00058A15 /* FollowersSearchManager.swift */,
+				EF28C89223C4679B000EC9DA /* RequestManager.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		EF9CB29823C2221A006FAA26 /* Favourite */ = {
@@ -245,6 +318,7 @@
 				EFADB8DE23C21A77007565C9 /* Application */,
 				EFADB8DF23C22092007565C9 /* MainTabBarController.swift */,
 				EF9CB29923C22225006FAA26 /* Modules */,
+				EF318DC923C3CC96007F3C71 /* Common */,
 				EF14D32923C242900015E1C5 /* Extension */,
 				EF14D31F23C242900015E1C5 /* Helpers */,
 				EFADB8D323C21A0A007565C9 /* Assets.xcassets */,
@@ -275,6 +349,15 @@
 				EFADB8E523C22122007565C9 /* SearchProtocols.swift */,
 			);
 			path = Search;
+			sourceTree = "<group>";
+		};
+		EFDDCCD023C4DD3800EE8BB7 /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				EFDDCCD123C4DD8500EE8BB7 /* CustomAlert.swift */,
+				EFDDCCD323C4DD9500EE8BB7 /* CustomAlert.xib */,
+			);
+			path = Alerts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,6 +423,7 @@
 				EF9CB29123C22214006FAA26 /* Favourites.storyboard in Resources */,
 				EF14D33723C242900015E1C5 /* empty.json in Resources */,
 				EF14D33B23C242900015E1C5 /* NoSearch.json in Resources */,
+				EFDDCCD423C4DD9500EE8BB7 /* CustomAlert.xib in Resources */,
 				EF14D33923C242900015E1C5 /* isPlaying2.json in Resources */,
 				EF14D33823C242900015E1C5 /* NoConnection.json in Resources */,
 				EFADB8D723C21A0A007565C9 /* LaunchScreen.storyboard in Resources */,
@@ -412,19 +496,25 @@
 				EF14D34623C242900015E1C5 /* UIView + Anchors.swift in Sources */,
 				EFADB8CB23C21A07007565C9 /* AppDelegate.swift in Sources */,
 				EF14D34A23C2446E0015E1C5 /* PrettyTextField.swift in Sources */,
+				EF318DCC23C3CCBA007F3C71 /* User.swift in Sources */,
 				EF14D34323C242900015E1C5 /* UITableView + TableFlip.swift in Sources */,
+				EF318DD523C3D0EB007F3C71 /* GetFollowersAPI.swift in Sources */,
 				EF9CB29623C22214006FAA26 /* FavouritesInteractor.swift in Sources */,
 				EFADB8ED23C22122007565C9 /* SearchInteractor.swift in Sources */,
 				EF53025F23C366DB00334ACD /* FollowerListConfigurator.swift in Sources */,
 				EF14D33E23C242900015E1C5 /* Extension + CMTime.swift in Sources */,
+				EF318DCE23C3CE6C007F3C71 /* Follower.swift in Sources */,
 				EF53025E23C366DB00334ACD /* FollowerListInteractor.swift in Sources */,
 				EFADB8EC23C22122007565C9 /* SearchProtocols.swift in Sources */,
 				EF14D34523C242900015E1C5 /* Extension + UIView.swift in Sources */,
 				EF14D33F23C242900015E1C5 /* Extension + CGFloat.swift in Sources */,
 				EF14D34823C244540015E1C5 /* PrettyButton.swift in Sources */,
 				EFADB8EA23C22122007565C9 /* SearchRouter.swift in Sources */,
+				EFDDCCD223C4DD8500EE8BB7 /* CustomAlert.swift in Sources */,
 				EF53025B23C366DB00334ACD /* FollowerListRouter.swift in Sources */,
+				EF28C89323C4679B000EC9DA /* RequestManager.swift in Sources */,
 				EF14D33D23C242900015E1C5 /* Extension + GCD.swift in Sources */,
+				EF7D18C023C3D39D00058A15 /* FollowersSearchManager.swift in Sources */,
 				EFADB8E023C22092007565C9 /* MainTabBarController.swift in Sources */,
 				EF9CB29723C22214006FAA26 /* FavouritesConfigurator.swift in Sources */,
 				EFADB8E923C22122007565C9 /* SearchPresenter.swift in Sources */,
@@ -432,7 +522,9 @@
 				EF14D34423C242900015E1C5 /* UIViewController + Storyboard.swift in Sources */,
 				EF9CB29223C22214006FAA26 /* FavouritesPresenter.swift in Sources */,
 				EF14D34223C242900015E1C5 /* Extension + TableDirector.swift in Sources */,
+				EF318DD123C3D025007F3C71 /* MainAPI.swift in Sources */,
 				EFADB8CD23C21A07007565C9 /* SceneDelegate.swift in Sources */,
+				EF318DD323C3D038007F3C71 /* APIResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

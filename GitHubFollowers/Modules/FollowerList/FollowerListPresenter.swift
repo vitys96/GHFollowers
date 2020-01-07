@@ -25,6 +25,10 @@ class FollowerListPresenter {
         self.router = router
         self.title = title
     }
+    
+    func viewWillAppear() {
+        self.interactor?.fetchData(userName: title)
+    }
 
 }
 
@@ -35,6 +39,18 @@ extension FollowerListPresenter: FollowerListPresenterInterface {
 
 // MARK: - FollowerListInteractorOutput -
 extension FollowerListPresenter: FollowerListInteractorOutput {
+    func fetchedFollowersList(lists: [Follower]) {
+        print (lists.map({$0.login}))
+    }
+    
+    func fetchedFollowersList(error: Error) {
+        
+    }
+    
+    func fetchedFully() {
+        
+    }
+    
     
 }
 
