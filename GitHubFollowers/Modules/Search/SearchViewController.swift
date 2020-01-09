@@ -29,6 +29,7 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
         configureUI()
         usernameTextField.text = "ivanvorobei"
+        //SAllen0400
     }
     
 }
@@ -69,6 +70,7 @@ extension SearchViewController {
     @objc private func pushFetchFollowersList() {
         guard let text = usernameTextField.text else { return }
         if !text.isEmpty {
+//            AlertManager.showBonusAlert(data: CustomAlert.Data.init(title: "Вам подарок!", detail: "Как только вы пополните\r\nбаланс на 1000₽\r\nБонус будет зачислен на ваш счет"))
             self.presenter?.navigateToFollowList(title: text)
         } else {
             usernameTextField.shake()

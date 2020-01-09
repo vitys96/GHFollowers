@@ -10,10 +10,13 @@
 //
 
 import UIKit
+import CollectionKit
 
 class FollowerListViewController: UIViewController {
     // MARK: - Properties
     var presenter: FollowerListPresenterInterface?
+    let collectionView = CollectionView()
+    
     
     // MARK: - Lifecycle -
     override func viewWillAppear(_ animated: Bool) {
@@ -25,13 +28,31 @@ class FollowerListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        configureCollection()
     }
     
 }
 
+extension FollowerListViewController {
+    private func configureCollection() {
+        view.addSubview(collectionView)
+        collectionView.backgroundColor = .systemBackground
+        collectionView.fillSuperview()
+        collectionView.alwaysBounceVertical = true
+        collectionView.delaysContentTouches = false
+        
+    }
+}
+
 // MARK: - FollowerListView
 extension FollowerListViewController: FollowerListView {
-    
+    func display(_ followersList: [FollowerCell.Data]) {
+        let dataSource = ArrayDataSource<FollowerCell.Data>.init(data: followersList) { (index, data) -> String in
+            return "\(index)"
+        }
+        let provider = FollowerCellProvider(dataSource)
+        collectionView.provider = provider
+    }
 }
 
 extension FollowerListViewController {

@@ -64,6 +64,6 @@ protocol FollowerListInteractorInput: class {
 protocol FollowerListView: class {
 
     var presenter: FollowerListPresenterInterface?  { get set }
-
+    func display(_ followersList: [FollowerCell.Data])
     /* Presenter -> ViewController */
 }

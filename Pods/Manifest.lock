@@ -41,10 +41,13 @@ PODS:
     - PromiseKit/CorePromise
   - PromiseKit/UIKit (6.12.0):
     - PromiseKit/CorePromise
+  - QuickLayout (3.0.0)
   - SDWebImage (5.3.2):
     - SDWebImage/Core (= 5.3.2)
   - SDWebImage/Core (5.3.2)
   - SPAlert (2.0.26)
+  - SwiftEntryKit (1.2.3):
+    - QuickLayout (= 3.0.0)
   - TableKit (2.10.0)
   - YetAnotherAnimationLibrary (1.4.0)
 
@@ -62,6 +65,7 @@ DEPENDENCIES:
   - PromiseKit/MapKit
   - SDWebImage
   - SPAlert
+  - SwiftEntryKit
   - TableKit
 
 SPEC REPOS:
@@ -73,8 +77,10 @@ SPEC REPOS:
     - lottie-ios
     - Marshal
     - PromiseKit
+    - QuickLayout
     - SDWebImage
     - SPAlert
+    - SwiftEntryKit
     - TableKit
     - YetAnotherAnimationLibrary
 
@@ -102,11 +108,13 @@ SPEC CHECKSUMS:
   Marshal: ef480864a6af10a63f67be7e55bb5d8fe67a16d9
   Motion: 4519d0019e9a68f5f70c366f26ff49efaff0017b
   PromiseKit: c06835ba442ce5454ce3cdde470232804a6e4ff8
+  QuickLayout: 07b45a72b10083fee3f095990cfed1c1e7b27f0a
   SDWebImage: 6ac2eb96571bff96ecde31a987172c5934a0eb7d
   SPAlert: 59689d38d4cb6f6c144b238ada1fae04446a4091
+  SwiftEntryKit: 340713c2e4a6662c5149629990bf1088bf5f0389
   TableKit: 65645d0dd786e21dc61464da59ad770c60a07282
   YetAnotherAnimationLibrary: 7f808b10c2d193dd3e82407e722fa60aa0bdff2d
 
-PODFILE CHECKSUM: 2fdad4f0ea4638a3b95b321f4508d31386a8b48b
+PODFILE CHECKSUM: 6abbf02058b45fec89292e4c73168d099a2c99c2
 
 COCOAPODS: 1.8.4

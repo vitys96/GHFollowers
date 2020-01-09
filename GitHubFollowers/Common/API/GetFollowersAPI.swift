@@ -17,7 +17,7 @@ struct GetFollowersAPI: MainAPI {
 //            "offset"    :   OffsetConfig.offset
 //            ] as [String : AnyObject]
         let baseUrl = "https://api.github.com"
-        let url = baseUrl + "/users/\(userName)/followers?per_page=100&page=1"
+        let url = baseUrl + "/users/\(userName)/followers?per_page=60&page=1"
         print (url)
         sendRequest(type: .get, url: url, parameters: nil, headers: nil, completion: completion)
     }
