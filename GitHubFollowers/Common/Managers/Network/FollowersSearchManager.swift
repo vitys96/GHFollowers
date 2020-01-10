@@ -10,9 +10,9 @@ import UIKit
 import PromiseKit
 struct FollowersSearchManager {
     
-    static func searchSongs(searchingText: String) -> Promise<[Follower]> {
+    static func searchSongs(searchingText: String, page: Int) -> Promise<[Follower]> {
         return Promise { (resolver) in
-            GetFollowersAPI.getFollowers(userName: searchingText) { (response) in
+            GetFollowersAPI.getFollowers(userName: searchingText, page: page) { (response) in
                 switch response {
                 case .Success(let data):
                     do {

@@ -15,11 +15,11 @@ struct AlertManager {
     static func closeCurrentAlert(completion: (()->())? = nil) {
         SwiftEntryKit.dismiss(with: completion)
     }
-    static func showBonusAlert(data: CustomAlert.Data, didSelectActionButton: (()-> Void)? = nil, didSelectCloseButton: (()-> Void)? = nil) {
+    static func showWarningAlert(data: CustomAlert.Data, didSelectActionButton: (()-> Void)? = nil, didSelectCloseButton: (()-> Void)? = nil) {
         AlertManager.currentAlert?.window?.rootViewController?.view.isUserInteractionEnabled = true
         
-        let bonusAlertView = CustomAlert.init(data: data)
-        bonusAlertView.didSelectCloseButton = {
+        let warningAlertView = CustomAlert.init(data: data)
+        warningAlertView.didSelectCloseButton = {
             SwiftEntryKit.dismiss(with: didSelectCloseButton)
         }
 //        bonusAlertView.didSelectActionButton = {
@@ -31,11 +31,11 @@ struct AlertManager {
             AlertManager.currentAlert = nil
         }
         if SwiftEntryKit.isCurrentlyDisplaying(entryNamed: "CustomAlert") {
-            SwiftEntryKit.transform(to: bonusAlertView)
+            SwiftEntryKit.transform(to: warningAlertView)
         } else {
-            SwiftEntryKit.display(entry: bonusAlertView, using: attributes)
+            SwiftEntryKit.display(entry: warningAlertView, using: attributes)
         }
-        currentAlert = bonusAlertView
+        currentAlert = warningAlertView
         
     }
 }

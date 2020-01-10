@@ -20,11 +20,10 @@ class FollowerListRouter {
 extension FollowerListRouter: FollowerListWireframeInterface {
     
     func navigate(to option: FollowerListNavigationOption) {
-//        switch option {
-//        case .firstModule:
-//              openFirstModule()
-//        case .secondModule(let someData):
-        //      openSecondModule(with someData)
-//        }
+        let vc: UIViewController!
+        switch option {
+        case .searchModule:
+            viewController?.navigationController?.popToRootViewController(animated: true)
+        }
     }
 }

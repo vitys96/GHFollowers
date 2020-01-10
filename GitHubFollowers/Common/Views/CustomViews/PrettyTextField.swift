@@ -29,7 +29,7 @@ class PrettyTextField: UITextField {
         layer.borderColor = UIColor.systemGray4.cgColor
         
         textColor = .label
-//        tintColor  = .label
+        clearButtonMode = .whileEditing
         textAlignment = .center
         font = UIFont.preferredFont(forTextStyle: .title2)
         adjustsFontSizeToFitWidth = true

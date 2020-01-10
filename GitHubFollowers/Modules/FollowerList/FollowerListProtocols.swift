@@ -13,8 +13,7 @@ import Foundation
 
 //MARK: Wireframe -
 enum FollowerListNavigationOption {
-    //    case firstModule
-    //    case secondModule(someData)
+    case searchModule
 }
 
 protocol FollowerListWireframeInterface: class {
@@ -25,6 +24,7 @@ protocol FollowerListWireframeInterface: class {
 protocol FollowerListPresenterInterface: class {
 
     var interactor: FollowerListInteractorInput? { get set }
+    func fetchData()
     
     // MARK: - Lifecycle -
     func viewDidLoad()
@@ -61,7 +61,7 @@ protocol FollowerListInteractorInput: class {
 }
 
 //MARK: View -
-protocol FollowerListView: class {
+protocol FollowerListView: class, Loadable {
 
     var presenter: FollowerListPresenterInterface?  { get set }
     func display(_ followersList: [FollowerCell.Data])

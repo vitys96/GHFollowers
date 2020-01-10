@@ -9,7 +9,7 @@
 import Foundation
 
 struct GetFollowersAPI: MainAPI {
-    static func getFollowers(userName: String, completion: ServerArrayResult?)  {
+    static func getFollowers(userName: String, page: Int, completion: ServerArrayResult?)  {
 //        let params = [
 //            "term"      :   searchText,
 //            "limit"     :   OffsetConfig.limit,
@@ -17,7 +17,7 @@ struct GetFollowersAPI: MainAPI {
 //            "offset"    :   OffsetConfig.offset
 //            ] as [String : AnyObject]
         let baseUrl = "https://api.github.com"
-        let url = baseUrl + "/users/\(userName)/followers?per_page=60&page=1"
+        let url = baseUrl + "/users/\(userName)/followers?per_page=24&page=\(page)"
         print (url)
         sendRequest(type: .get, url: url, parameters: nil, headers: nil, completion: completion)
     }

@@ -33,7 +33,7 @@ class FollowerCellProvider: BasicProvider<FollowerCell.Data, FollowerCell> {
             viewSource: sourceView,
             sizeSource: sourceSize,
             layout: layout,
-            animator: AnimatedReloadAnimator()
+            animator: WobbleAnimator()
         )
     }
 }

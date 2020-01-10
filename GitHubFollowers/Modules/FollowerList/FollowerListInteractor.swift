@@ -16,10 +16,12 @@ class FollowerListInteractor: FollowerListInteractorInput {
     
     // MARK: - Properties
     weak var presenter: FollowerListInteractorOutput?
+    private var page: Int = 0
     
     // MARK: - FollowerListInteractorInput -
     func fetchData(userName: String) {
-        FollowersSearchManager.searchSongs(searchingText: userName)
+        page += 1
+        FollowersSearchManager.searchSongs(searchingText: userName, page: page)
         .done {[weak self] (followersList) in
                 self?.presenter?.fetchedFollowersList(lists: followersList)
         }.catch {[weak self] (error) in

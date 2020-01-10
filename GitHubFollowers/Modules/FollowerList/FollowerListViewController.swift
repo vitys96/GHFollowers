@@ -16,19 +16,21 @@ class FollowerListViewController: UIViewController {
     // MARK: - Properties
     var presenter: FollowerListPresenterInterface?
     let collectionView = CollectionView()
+    var cellsDataSource = ArrayDataSource<FollowerCell.Data>(data: [])
+    private var isFetching: Bool = false
     
     
     // MARK: - Lifecycle -
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: true)
-        self.presenter?.viewWillAppear()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
         configureCollection()
+        presenter?.viewDidLoad()
     }
     
 }
@@ -40,6 +42,8 @@ extension FollowerListViewController {
         collectionView.fillSuperview()
         collectionView.alwaysBounceVertical = true
         collectionView.delaysContentTouches = false
+        collectionView.delegate = self
+        collectionView.provider = FollowerCellProvider(cellsDataSource)
         
     }
 }
@@ -47,11 +51,8 @@ extension FollowerListViewController {
 // MARK: - FollowerListView
 extension FollowerListViewController: FollowerListView {
     func display(_ followersList: [FollowerCell.Data]) {
-        let dataSource = ArrayDataSource<FollowerCell.Data>.init(data: followersList) { (index, data) -> String in
-            return "\(index)"
-        }
-        let provider = FollowerCellProvider(dataSource)
-        collectionView.provider = provider
+        cellsDataSource.data.append(contentsOf: followersList)
+        collectionView.reloadData()
     }
 }
 
@@ -60,5 +61,25 @@ extension FollowerListViewController {
         self.view.backgroundColor = .systemBackground
     }
 }
+
+extension FollowerListViewController: UIScrollViewDelegate {
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        if offsetY > contentHeight / 1.5 - scrollView.frame.height {
+            if !isFetching {
+                fetchingMore()
+            }
+        }
+    }
+    private func fetchingMore() {
+        isFetching = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.01) {
+            self.presenter?.fetchData()
+            self.isFetching = false
+        }
+    }
+}
+
 
 

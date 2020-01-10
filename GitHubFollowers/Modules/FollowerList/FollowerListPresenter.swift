@@ -17,7 +17,7 @@ class FollowerListPresenter {
     var interactor: FollowerListInteractorInput?
     private let router: FollowerListWireframeInterface
     private var title: String
-
+    
     // MARK: - Initialization and deinitialization -
     init(interface: FollowerListView, interactor: FollowerListInteractorInput?, router: FollowerListWireframeInterface, title: String) {
         self.view = interface
@@ -26,20 +26,30 @@ class FollowerListPresenter {
         self.title = title
     }
     
-    func viewWillAppear() {
-        self.interactor?.fetchData(userName: title)
+    func viewDidLoad() {
+        fetchData()
     }
-
+    
 }
 
 // MARK: - FollowerListPresenterInterface -
 extension FollowerListPresenter: FollowerListPresenterInterface {
-    
+    func fetchData() {
+        view?.startLoading()
+        self.interactor?.fetchData(userName: title)
+    }
 }
 
 // MARK: - FollowerListInteractorOutput -
 extension FollowerListPresenter: FollowerListInteractorOutput {
     func fetchedFollowersList(lists: [Follower]) {
+        view?.stopLoading()
+        if lists.count == 0 {
+            AlertManager.showWarningAlert(data: CustomAlert.Data(title: "Sorry", detail: "\(title)'s followers not found. Count = 0"), didSelectActionButton: nil) {
+                self.router.navigate(to: .searchModule)
+            }
+            return
+        }
         let items: [FollowerCell.Data] = lists.map({FollowerCell.Data(imageUrl: $0.avatarUrl ?? "", userName: $0.login ?? "")})
         view?.display(items)
     }

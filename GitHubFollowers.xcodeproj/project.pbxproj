@@ -26,6 +26,7 @@
 		EF14D34823C244540015E1C5 /* PrettyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF14D34723C244540015E1C5 /* PrettyButton.swift */; };
 		EF14D34A23C2446E0015E1C5 /* PrettyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF14D34923C2446E0015E1C5 /* PrettyTextField.swift */; };
 		EF28C89323C4679B000EC9DA /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF28C89223C4679B000EC9DA /* RequestManager.swift */; };
+		EF30C44B23C9211100BF13DB /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF30C44A23C9211100BF13DB /* Loadable.swift */; };
 		EF318DCC23C3CCBA007F3C71 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF318DCB23C3CCBA007F3C71 /* User.swift */; };
 		EF318DCE23C3CE6C007F3C71 /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF318DCD23C3CE6C007F3C71 /* Follower.swift */; };
 		EF318DD123C3D025007F3C71 /* MainAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF318DD023C3D025007F3C71 /* MainAPI.swift */; };
@@ -94,6 +95,7 @@
 		EF14D34723C244540015E1C5 /* PrettyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrettyButton.swift; sourceTree = "<group>"; };
 		EF14D34923C2446E0015E1C5 /* PrettyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrettyTextField.swift; sourceTree = "<group>"; };
 		EF28C89223C4679B000EC9DA /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
+		EF30C44A23C9211100BF13DB /* Loadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loadable.swift; sourceTree = "<group>"; };
 		EF318DCB23C3CCBA007F3C71 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		EF318DCD23C3CE6C007F3C71 /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
 		EF318DD023C3D025007F3C71 /* MainAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAPI.swift; sourceTree = "<group>"; };
@@ -227,9 +229,18 @@
 			path = CustomViews;
 			sourceTree = "<group>";
 		};
+		EF30C44923C9209900BF13DB /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				EF30C44A23C9211100BF13DB /* Loadable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		EF318DC923C3CC96007F3C71 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				EF30C44923C9209900BF13DB /* Protocols */,
 				EF96FC9623C7B96F00A6D05D /* Providers */,
 				EF28C89423C4B1EB000EC9DA /* Views */,
 				EF7D18BD23C3D36F00058A15 /* Managers */,
@@ -549,6 +560,7 @@
 				EF14D34023C242900015E1C5 /* Extension + Nib.swift in Sources */,
 				EFADB8EE23C22122007565C9 /* SearchConfigurator.swift in Sources */,
 				EF9CB29323C22214006FAA26 /* FavouritesRouter.swift in Sources */,
+				EF30C44B23C9211100BF13DB /* Loadable.swift in Sources */,
 				EF96FC9823C7B98F00A6D05D /* FollowerCellProvider.swift in Sources */,
 				EFADB8EB23C22122007565C9 /* SearchViewController.swift in Sources */,
 				EF14D34623C242900015E1C5 /* UIView + Anchors.swift in Sources */,
