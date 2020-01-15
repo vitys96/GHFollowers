@@ -57,7 +57,8 @@ extension FollowerListPresenter: FollowerListInteractorOutput {
 //            }
             return
         }
-        let items: [FollowerCell.Data] = lists.map({FollowerCell.Data(imageUrl: $0.avatarUrl ?? "", userName: $0.login ?? "")})
+        let items: [FollowerCell.Data] = lists.map({FollowerCell.Data(imageUrl: $0.avatarUrl ?? "",
+                                                                      userName: $0.login ?? "")})
         view?.display(items)
     }
     
@@ -67,8 +68,6 @@ extension FollowerListPresenter: FollowerListInteractorOutput {
     
     func fetchedFully() {
         
-    }
-    
-    
+    } 
 }
 

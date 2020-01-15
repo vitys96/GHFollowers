@@ -21,7 +21,7 @@ class FollowerListInteractor: FollowerListInteractorInput {
     // MARK: - FollowerListInteractorInput -
     func fetchData(userName: String) {
         page += 1
-        FollowersSearchManager.searchSongs(searchingText: userName, page: page)
+        FollowersSearchManager.searchFollowers(searchingText: userName, page: page)
         .done {[weak self] (followersList) in
                 self?.presenter?.fetchedFollowersList(lists: followersList)
         }.catch {[weak self] (error) in

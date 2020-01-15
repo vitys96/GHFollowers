@@ -45,6 +45,9 @@ extension UserInfoPresenterInterface {
 
 //MARK: Interactor -
 protocol UserInfoInteractorOutput: class {
+    func fetchedUserInfo(userInfo: User)
+    func fetchedUserInfo(error: Error)
+    func fetchedFully()
 
     /* Interactor -> Presenter */
 }
@@ -60,6 +63,7 @@ protocol UserInfoInteractorInput: class {
 protocol UserInfoView: class {
 
     var presenter: UserInfoPresenterInterface?  { get set }
-
+    func display(_ userInfo: User)
+    func display(_ navigationTitle: String)
     /* Presenter -> ViewController */
 }

@@ -25,19 +25,30 @@ class UserInfoPresenter {
         self.router = router
         self.name = name
     }
-    func viewDidLoad() {
-        self.interactor?.fetchData(userName: name)
-    }
+
 
 }
 
 // MARK: - UserInfoPresenterInterface -
 extension UserInfoPresenter: UserInfoPresenterInterface {
-    
+    func viewDidLoad() {
+        self.view?.display(name)
+        self.interactor?.fetchData(userName: name)
+    }
 }
 
 // MARK: - UserInfoInteractorOutput -
 extension UserInfoPresenter: UserInfoInteractorOutput {
+    func fetchedUserInfo(userInfo: User) {
+        self.view?.display(userInfo)
+    }
     
+    func fetchedUserInfo(error: Error) {
+        
+    }
+    
+    func fetchedFully() {
+        
+    }
 }
 

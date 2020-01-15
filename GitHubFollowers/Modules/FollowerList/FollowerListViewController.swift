@@ -51,10 +51,11 @@ extension FollowerListViewController: FollowerListView {
             self.presenter?.didSelectFollowerCell(followerName: followerData)
         }
         collectionView.provider = FollowerCellProvider(cellsDataSource, tapHandler: selectionSportAction)
-        collectionView.reloadData()
+//        collectionView.reloadData()
     }
 }
 
+// MARK: - ConfigureUI
 extension FollowerListViewController {
     private func configureUI() {
         self.view.backgroundColor = .systemBackground

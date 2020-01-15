@@ -19,13 +19,13 @@ class UserInfoInteractor: UserInfoInteractorInput {
     // MARK: - UserInfoInteractorInput -
     func fetchData(userName: String) {
         FollowersSearchManager.searchUserInfo(name: userName)
-        .done {[weak self] (followersList) in
-            print (followersList.login)
+        .done {[weak self] (userInfo) in
+            self?.presenter?.fetchedUserInfo(userInfo: userInfo)
         }.catch {[weak self] (error) in
-            
+            self?.presenter?.fetchedUserInfo(error: error)
         }
         .finally {[weak self] in
-            
+            self?.presenter?.fetchedFully()
         }
     }
 }
