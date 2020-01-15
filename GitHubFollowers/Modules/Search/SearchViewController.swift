@@ -28,8 +28,9 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
-        usernameTextField.text = "ivanvorobei"
+        usernameTextField.text = "SAllen0400"
         //SAllen0400
+        //ivanvorobei
     }
     
 }

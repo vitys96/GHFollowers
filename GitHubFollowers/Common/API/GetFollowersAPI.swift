@@ -18,7 +18,6 @@ struct GetFollowersAPI: MainAPI {
 //            ] as [String : AnyObject]
         let baseUrl = "https://api.github.com"
         let url = baseUrl + "/users/\(userName)/followers?per_page=24&page=\(page)"
-        print (url)
         sendRequest(type: .get, url: url, parameters: nil, headers: nil, completion: completion)
     }
 }

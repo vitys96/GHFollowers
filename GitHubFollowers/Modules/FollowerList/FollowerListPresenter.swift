@@ -34,6 +34,11 @@ class FollowerListPresenter {
 
 // MARK: - FollowerListPresenterInterface -
 extension FollowerListPresenter: FollowerListPresenterInterface {
+    
+    func didSelectFollowerCell(followerName: String) {
+        self.router.navigate(to: .userInfo(name: followerName))
+    }
+    
     func fetchData() {
         view?.startLoading()
         self.interactor?.fetchData(userName: title)
@@ -45,9 +50,11 @@ extension FollowerListPresenter: FollowerListInteractorOutput {
     func fetchedFollowersList(lists: [Follower]) {
         view?.stopLoading()
         if lists.count == 0 {
-            AlertManager.showWarningAlert(data: CustomAlert.Data(title: "Sorry", detail: "\(title)'s followers not found. Count = 0"), didSelectActionButton: nil) {
-                self.router.navigate(to: .searchModule)
-            }
+            view?.showEmptyStateView(with: "\(title) doesn't have any followers. Go follow them 😉")
+//            view.showEmptyStateView
+//            AlertManager.showWarningAlert(data: CustomAlert.Data(title: "Sorry", detail: "\(title)'s followers not found. Count = 0"), didSelectActionButton: nil) {
+//                self.router.navigate(to: .searchModule)
+//            }
             return
         }
         let items: [FollowerCell.Data] = lists.map({FollowerCell.Data(imageUrl: $0.avatarUrl ?? "", userName: $0.login ?? "")})

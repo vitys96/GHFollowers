@@ -20,10 +20,17 @@ class FollowerListRouter {
 extension FollowerListRouter: FollowerListWireframeInterface {
     
     func navigate(to option: FollowerListNavigationOption) {
-        let vc: UIViewController!
+        var vc: UIViewController!
         switch option {
         case .searchModule:
             viewController?.navigationController?.popToRootViewController(animated: true)
+        case .userInfo(let name):
+            vc = UserInfoConfigurator.createModule(with: name)
+        }
+        if vc is UINavigationController {
+            viewController?.present(vc, animated: true, completion: nil)
+        } else {
+            viewController?.navigationController?.pushViewController(vc, animated: true)
         }
     }
 }

@@ -17,7 +17,11 @@ class FollowerListViewController: UIViewController {
     var presenter: FollowerListPresenterInterface?
     let collectionView = CollectionView()
     var cellsDataSource = ArrayDataSource<FollowerCell.Data>(data: [])
+    var followersData: [FollowerCell.Data] = []
+    var filterFollowersData: [FollowerCell.Data] = []
     private var isFetching: Bool = false
+    private var isSearching: Bool = false
+    
     
     
     // MARK: - Lifecycle -
@@ -29,29 +33,24 @@ class FollowerListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
-        configureCollection()
         presenter?.viewDidLoad()
     }
     
 }
 
-extension FollowerListViewController {
-    private func configureCollection() {
-        view.addSubview(collectionView)
-        collectionView.backgroundColor = .systemBackground
-        collectionView.fillSuperview()
-        collectionView.alwaysBounceVertical = true
-        collectionView.delaysContentTouches = false
-        collectionView.delegate = self
-        collectionView.provider = FollowerCellProvider(cellsDataSource)
-        
-    }
-}
+
 
 // MARK: - FollowerListView
 extension FollowerListViewController: FollowerListView {
     func display(_ followersList: [FollowerCell.Data]) {
+        followersData.append(contentsOf: followersList)
         cellsDataSource.data.append(contentsOf: followersList)
+        let selectionSportAction = { [weak self] (context: FollowerCellProvider.TapContext) -> Void in
+            guard let self = self else { return }
+            let followerData = followersList[context.index].userName
+            self.presenter?.didSelectFollowerCell(followerName: followerData)
+        }
+        collectionView.provider = FollowerCellProvider(cellsDataSource, tapHandler: selectionSportAction)
         collectionView.reloadData()
     }
 }
@@ -59,9 +58,56 @@ extension FollowerListViewController: FollowerListView {
 extension FollowerListViewController {
     private func configureUI() {
         self.view.backgroundColor = .systemBackground
+        configureCollection()
+        configureSearchController()
+        self.view.collectionAnimator = WobbleAnimator()
+    }
+    
+    private func configureCollection() {
+        view.addSubview(collectionView)
+        collectionView.backgroundColor = .systemBackground
+        collectionView.fillSuperview()
+        collectionView.alwaysBounceVertical = true
+        collectionView.delaysContentTouches = false
+        collectionView.delegate = self
+        collectionView.keyboardDismissMode = .onDrag
+        
+        
+    }
+    private func configureSearchController() {
+        let searchVC = UISearchController(searchResultsController: nil)
+        searchVC.searchResultsUpdater = self
+        searchVC.searchBar.delegate = self
+        searchVC.searchBar.placeholder = "Search for a username"
+        searchVC.obscuresBackgroundDuringPresentation = false
+        searchVC.hidesNavigationBarDuringPresentation = false
+        navigationItem.hidesSearchBarWhenScrolling = false
+        navigationItem.searchController = searchVC
+        self.definesPresentationContext = true
     }
 }
 
+// MARK: - UISearchResultsUpdating
+extension FollowerListViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let filter = searchController.searchBar.text, !filter.isEmpty else { return }
+        isSearching = true
+        filterFollowersData = cellsDataSource.data.filter{ $0.userName.lowercased().contains(filter.lowercased()) }
+        cellsDataSource.data = filterFollowersData
+        
+    }
+}
+
+// MARK: - UISearchBarDelegate
+extension FollowerListViewController: UISearchBarDelegate {
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        isSearching = false
+        cellsDataSource.data = followersData
+        collectionView.reloadData()
+    }
+}
+
+// MARK: - UIScrollViewDelegate
 extension FollowerListViewController: UIScrollViewDelegate {
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         let offsetY = scrollView.contentOffset.y

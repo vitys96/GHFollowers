@@ -27,4 +27,19 @@ struct FollowersSearchManager {
             }
         }
     }
+    
+    static func searchUserInfo(name: String) -> Promise<User> {
+        return Promise { (resolver) in
+            GetUserInfo.getUserInfo(userName: name) { (response) in
+                switch response {
+                case .Success(let data):
+                    let lala = User(object: data)
+                    resolver.fulfill(lala)
+                case .Error(let code, let message):
+                    resolver.reject(ResponseError.with(code: code, message: message))
+                }
+            }
+        }
+    }
+    
 }

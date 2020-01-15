@@ -69,4 +69,11 @@ extension UIViewController {
         alertView.haptic = .success
         alertView.present()
     }
+    
+    func showEmptyStateView(with message: String) {
+        let emptyStateView = EmptyView(title: message)
+        emptyStateView.frame = self.view.bounds
+        view.addSubview(emptyStateView)
+        
+    }
 }

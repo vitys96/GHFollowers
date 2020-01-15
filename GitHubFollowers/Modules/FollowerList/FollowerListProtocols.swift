@@ -14,6 +14,7 @@ import Foundation
 //MARK: Wireframe -
 enum FollowerListNavigationOption {
     case searchModule
+    case userInfo(name: String)
 }
 
 protocol FollowerListWireframeInterface: class {
@@ -25,6 +26,7 @@ protocol FollowerListPresenterInterface: class {
 
     var interactor: FollowerListInteractorInput? { get set }
     func fetchData()
+    func didSelectFollowerCell(followerName: String)
     
     // MARK: - Lifecycle -
     func viewDidLoad()

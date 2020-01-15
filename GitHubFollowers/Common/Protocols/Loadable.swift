@@ -10,4 +10,5 @@ import Foundation
 protocol Loadable {
     func startLoading()
     func stopLoading()
+    func showEmptyStateView(with message: String)
 }

@@ -30,7 +30,7 @@ class MainTabBarController: UITabBarController {
         navVC.tabBarItem = UITabBarItem(tabBarSystemItem: tabBarItem, tag: tag)
         navVC.tabBarItem.title = title
         rootVC.navigationItem.title = title
-        navVC.navigationBar.prefersLargeTitles = false
+        navVC.navigationBar.prefersLargeTitles = true
         return navVC
     }
     

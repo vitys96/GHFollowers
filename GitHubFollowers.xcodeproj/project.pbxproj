@@ -40,6 +40,7 @@
 		EF53025E23C366DB00334ACD /* FollowerListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF53025723C366DB00334ACD /* FollowerListInteractor.swift */; };
 		EF53025F23C366DB00334ACD /* FollowerListConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF53025823C366DB00334ACD /* FollowerListConfigurator.swift */; };
 		EF7D18C023C3D39D00058A15 /* FollowersSearchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7D18BF23C3D39D00058A15 /* FollowersSearchManager.swift */; };
+		EF7F4F1523CB22D700020BEB /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7F4F1423CB22D700020BEB /* EmptyView.swift */; };
 		EF96FC9323C7B56D00A6D05D /* FollowerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF96FC9223C7B56D00A6D05D /* FollowerCell.swift */; };
 		EF96FC9523C7B57500A6D05D /* FollowerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF96FC9423C7B57500A6D05D /* FollowerCell.xib */; };
 		EF96FC9823C7B98F00A6D05D /* FollowerCellProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF96FC9723C7B98F00A6D05D /* FollowerCellProvider.swift */; };
@@ -69,6 +70,14 @@
 		EFB4EEED23C65A4A00C38AE5 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB4EEEC23C65A4A00C38AE5 /* AlertManager.swift */; };
 		EFDDCCD223C4DD8500EE8BB7 /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDDCCD123C4DD8500EE8BB7 /* CustomAlert.swift */; };
 		EFDDCCD423C4DD9500EE8BB7 /* CustomAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFDDCCD323C4DD9500EE8BB7 /* CustomAlert.xib */; };
+		EFF940BA23CF58AA00DE7E77 /* UserInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFF940B323CF58AA00DE7E77 /* UserInfo.storyboard */; };
+		EFF940BB23CF58AA00DE7E77 /* UserInfoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF940B423CF58AA00DE7E77 /* UserInfoPresenter.swift */; };
+		EFF940BC23CF58AA00DE7E77 /* UserInfoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF940B523CF58AA00DE7E77 /* UserInfoRouter.swift */; };
+		EFF940BD23CF58AA00DE7E77 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF940B623CF58AA00DE7E77 /* UserInfoViewController.swift */; };
+		EFF940BE23CF58AA00DE7E77 /* UserInfoProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF940B723CF58AA00DE7E77 /* UserInfoProtocols.swift */; };
+		EFF940BF23CF58AA00DE7E77 /* UserInfoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF940B823CF58AA00DE7E77 /* UserInfoInteractor.swift */; };
+		EFF940C023CF58AA00DE7E77 /* UserInfoConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF940B923CF58AA00DE7E77 /* UserInfoConfigurator.swift */; };
+		EFF940C223CF5AB700DE7E77 /* GetUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF940C123CF5AB700DE7E77 /* GetUserInfo.swift */; };
 		F19460BA4BAAE6177677B73E /* Pods_GitHubFollowers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AE77884C9FBDD3E76A73447 /* Pods_GitHubFollowers.framework */; };
 /* End PBXBuildFile section */
 
@@ -109,6 +118,7 @@
 		EF53025723C366DB00334ACD /* FollowerListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListInteractor.swift; sourceTree = "<group>"; };
 		EF53025823C366DB00334ACD /* FollowerListConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListConfigurator.swift; sourceTree = "<group>"; };
 		EF7D18BF23C3D39D00058A15 /* FollowersSearchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersSearchManager.swift; sourceTree = "<group>"; };
+		EF7F4F1423CB22D700020BEB /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
 		EF96FC9223C7B56D00A6D05D /* FollowerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerCell.swift; sourceTree = "<group>"; };
 		EF96FC9423C7B57500A6D05D /* FollowerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowerCell.xib; sourceTree = "<group>"; };
 		EF96FC9723C7B98F00A6D05D /* FollowerCellProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerCellProvider.swift; sourceTree = "<group>"; };
@@ -140,6 +150,14 @@
 		EFB4EEEC23C65A4A00C38AE5 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		EFDDCCD123C4DD8500EE8BB7 /* CustomAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
 		EFDDCCD323C4DD9500EE8BB7 /* CustomAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomAlert.xib; sourceTree = "<group>"; };
+		EFF940B323CF58AA00DE7E77 /* UserInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserInfo.storyboard; sourceTree = "<group>"; };
+		EFF940B423CF58AA00DE7E77 /* UserInfoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoPresenter.swift; sourceTree = "<group>"; };
+		EFF940B523CF58AA00DE7E77 /* UserInfoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoRouter.swift; sourceTree = "<group>"; };
+		EFF940B623CF58AA00DE7E77 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
+		EFF940B723CF58AA00DE7E77 /* UserInfoProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoProtocols.swift; sourceTree = "<group>"; };
+		EFF940B823CF58AA00DE7E77 /* UserInfoInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoInteractor.swift; sourceTree = "<group>"; };
+		EFF940B923CF58AA00DE7E77 /* UserInfoConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoConfigurator.swift; sourceTree = "<group>"; };
+		EFF940C123CF5AB700DE7E77 /* GetUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +231,7 @@
 		EF28C89423C4B1EB000EC9DA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EF7F4F1323CB1FE500020BEB /* EmptyView */,
 				EF96FC9123C7B55100A6D05D /* CollectionViewCells */,
 				EFDDCCD023C4DD3800EE8BB7 /* Alerts */,
 				EF28C89523C4B1FF000EC9DA /* CustomViews */,
@@ -265,6 +284,7 @@
 				EF318DD023C3D025007F3C71 /* MainAPI.swift */,
 				EF318DD223C3D038007F3C71 /* APIResponse.swift */,
 				EF318DD423C3D0EB007F3C71 /* GetFollowersAPI.swift */,
+				EFF940C123CF5AB700DE7E77 /* GetUserInfo.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -299,6 +319,14 @@
 				EF28C89223C4679B000EC9DA /* RequestManager.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		EF7F4F1323CB1FE500020BEB /* EmptyView */ = {
+			isa = PBXGroup;
+			children = (
+				EF7F4F1423CB22D700020BEB /* EmptyView.swift */,
+			);
+			path = EmptyView;
 			sourceTree = "<group>";
 		};
 		EF96FC9123C7B55100A6D05D /* CollectionViewCells */ = {
@@ -348,6 +376,7 @@
 			children = (
 				EFADB8EF23C22127007565C9 /* Search */,
 				EF53026023C3671F00334ACD /* FollowerList */,
+				EFF940B223CF589C00DE7E77 /* UserInfo */,
 				EF9CB29823C2221A006FAA26 /* Favourite */,
 			);
 			path = Modules;
@@ -427,6 +456,20 @@
 			path = Alerts;
 			sourceTree = "<group>";
 		};
+		EFF940B223CF589C00DE7E77 /* UserInfo */ = {
+			isa = PBXGroup;
+			children = (
+				EFF940B923CF58AA00DE7E77 /* UserInfoConfigurator.swift */,
+				EFF940B323CF58AA00DE7E77 /* UserInfo.storyboard */,
+				EFF940B623CF58AA00DE7E77 /* UserInfoViewController.swift */,
+				EFF940B423CF58AA00DE7E77 /* UserInfoPresenter.swift */,
+				EFF940B823CF58AA00DE7E77 /* UserInfoInteractor.swift */,
+				EFF940B523CF58AA00DE7E77 /* UserInfoRouter.swift */,
+				EFF940B723CF58AA00DE7E77 /* UserInfoProtocols.swift */,
+			);
+			path = UserInfo;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -492,6 +535,7 @@
 				EF14D33B23C242900015E1C5 /* NoSearch.json in Resources */,
 				EFDDCCD423C4DD9500EE8BB7 /* CustomAlert.xib in Resources */,
 				EF14D33923C242900015E1C5 /* isPlaying2.json in Resources */,
+				EFF940BA23CF58AA00DE7E77 /* UserInfo.storyboard in Resources */,
 				EF14D33823C242900015E1C5 /* NoConnection.json in Resources */,
 				EFADB8D723C21A0A007565C9 /* LaunchScreen.storyboard in Resources */,
 				EFADB8E823C22122007565C9 /* Search.storyboard in Resources */,
@@ -556,11 +600,16 @@
 				EF9CB29423C22214006FAA26 /* FavouritesViewController.swift in Sources */,
 				EF14D33C23C242900015E1C5 /* Extension + UIButton.swift in Sources */,
 				EF53025A23C366DB00334ACD /* FollowerListPresenter.swift in Sources */,
+				EFF940BB23CF58AA00DE7E77 /* UserInfoPresenter.swift in Sources */,
 				EF9CB29523C22214006FAA26 /* FavouritesProtocols.swift in Sources */,
 				EF14D34023C242900015E1C5 /* Extension + Nib.swift in Sources */,
+				EF7F4F1523CB22D700020BEB /* EmptyView.swift in Sources */,
+				EFF940BF23CF58AA00DE7E77 /* UserInfoInteractor.swift in Sources */,
 				EFADB8EE23C22122007565C9 /* SearchConfigurator.swift in Sources */,
 				EF9CB29323C22214006FAA26 /* FavouritesRouter.swift in Sources */,
 				EF30C44B23C9211100BF13DB /* Loadable.swift in Sources */,
+				EFF940C223CF5AB700DE7E77 /* GetUserInfo.swift in Sources */,
+				EFF940BC23CF58AA00DE7E77 /* UserInfoRouter.swift in Sources */,
 				EF96FC9823C7B98F00A6D05D /* FollowerCellProvider.swift in Sources */,
 				EFADB8EB23C22122007565C9 /* SearchViewController.swift in Sources */,
 				EF14D34623C242900015E1C5 /* UIView + Anchors.swift in Sources */,
@@ -570,6 +619,7 @@
 				EF96FC9E23C7B9C500A6D05D /* CollectionCell.swift in Sources */,
 				EF14D34323C242900015E1C5 /* UITableView + TableFlip.swift in Sources */,
 				EF318DD523C3D0EB007F3C71 /* GetFollowersAPI.swift in Sources */,
+				EFF940C023CF58AA00DE7E77 /* UserInfoConfigurator.swift in Sources */,
 				EF9CB29623C22214006FAA26 /* FavouritesInteractor.swift in Sources */,
 				EFADB8ED23C22122007565C9 /* SearchInteractor.swift in Sources */,
 				EF53025F23C366DB00334ACD /* FollowerListConfigurator.swift in Sources */,
@@ -594,9 +644,11 @@
 				EFADB8E923C22122007565C9 /* SearchPresenter.swift in Sources */,
 				EF14D34123C242900015E1C5 /* Extension + ViewController.swift in Sources */,
 				EF14D34423C242900015E1C5 /* UIViewController + Storyboard.swift in Sources */,
+				EFF940BE23CF58AA00DE7E77 /* UserInfoProtocols.swift in Sources */,
 				EF9CB29223C22214006FAA26 /* FavouritesPresenter.swift in Sources */,
 				EF96FC9323C7B56D00A6D05D /* FollowerCell.swift in Sources */,
 				EF14D34223C242900015E1C5 /* Extension + TableDirector.swift in Sources */,
+				EFF940BD23CF58AA00DE7E77 /* UserInfoViewController.swift in Sources */,
 				EF96FC9F23C7B9C500A6D05D /* CollectionInsidable.swift in Sources */,
 				EF318DD123C3D025007F3C71 /* MainAPI.swift in Sources */,
 				EFADB8CD23C21A07007565C9 /* SceneDelegate.swift in Sources */,
