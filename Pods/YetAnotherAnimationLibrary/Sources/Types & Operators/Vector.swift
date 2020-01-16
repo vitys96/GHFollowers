@@ -24,9 +24,9 @@ import UIKit
 import simd
 
 public typealias Vector1 = Double
-public typealias Vector2 = double2
-public typealias Vector3 = double3
-public typealias Vector4 = double4
+public typealias Vector2 = SIMD2<Double>
+public typealias Vector3 = SIMD2<Double>
+public typealias Vector4 = SIMD2<Double>
 
 public protocol VectorType: ExpressibleByArrayLiteral {
     init()
@@ -74,25 +74,25 @@ extension Double: VectorType, VectorConvertible {
 }
 
 extension double2: VectorType, VectorConvertible {
-    public static var zero = double2()
+    public static var zero = SIMD2<Double>()
     public static var rawValueCount: Int { return 2 }
-    public func distance(between: double2) -> Double {
+    public func distance(between: SIMD2<Double>) -> Double {
         return simd.distance(self, between)
     }
 }
 
 extension double3: VectorType, VectorConvertible {
-    public static var zero = double3()
+    public static var zero = SIMD3<Double>()
     public static var rawValueCount: Int { return 3 }
-    public func distance(between: double3) -> Double {
+    public func distance(between: SIMD3<Double>) -> Double {
         return simd.distance(self, between)
     }
 }
 
 extension double4: VectorType, VectorConvertible {
-    public static var zero = double4()
+    public static var zero = SIMD4<Double>()
     public static var rawValueCount: Int { return 4 }
-    public func distance(between: double4) -> Double {
+    public func distance(between: SIMD4<Double>) -> Double {
         return simd.distance(self, between)
     }
 }
